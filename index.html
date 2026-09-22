@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Emoji Dancer</title>
+<style>
+html,body{height:100%;margin:0}
+body{display:grid;place-items:center;background:#111;color:#fff;overflow:hidden}
+pre{margin:0;font:700 clamp(28px,8vw,72px)/1.05 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;white-space:pre;text-align:left;user-select:none}
+</style>
+</head>
+<body>
+<pre id="d" aria-label="三帧循环跳舞小人"></pre>
+<script>
+const f=[
+`    👋
+   \\
+   😎
+  /
+ /
+腰⭕
+ \\
+ / \\`,
+`   👋
+   \\
+   😎
+   |
+   |
+⭕腰⭕
+   |
+  / \\`,
+` 👋
+   \\
+   😎
+    \\
+     \\
+    ⭕腰
+     /
+    / \\`
+];
+let i=0,d=document.getElementById("d");
+function draw(){d.textContent=f[i++%3]}
+draw();setInterval(draw,300);
+</script>
+</body>
+</html>
