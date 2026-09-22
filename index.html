@@ -14,30 +14,27 @@ pre{margin:0;font:700 clamp(28px,8vw,72px)/1.05 ui-monospace,SFMono-Regular,Menl
 <pre id="d" aria-label="三帧循环跳舞小人"></pre>
 <script>
 const f=[
-`    👋
-   \\
-   😎
-  /
- /
-腰⭕
+`👋
  \\
- / \\`,
-`   👋
-   \\
-   😎
-   |
-   |
-⭕腰⭕
-   |
-  / \\`,
+  😎
+   / \\_
+    / /
+  ==O==
+    / \\`,
 ` 👋
+  \\
+    😎
+     | \\_
+     |  /
+   ==O==
+     / \\`,
+`  👋
    \\
-   😎
-    \\
-     \\
-    ⭕腰
-     /
-    / \\`
+    😎
+     \\ \\_
+      \\ /
+    ==O==
+      / \\`
 ];
 let i=0,d=document.getElementById("d");
 function draw(){d.textContent=f[i++%3]}
